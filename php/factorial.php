@@ -6,6 +6,7 @@ function calcFactorial ($num) {
 			throw(new InvalidArgumentException("function argument must be numeric"));
 		}
 	} catch (Exception $e) {
+		echo $e->getMessage();
 		return 0;
 	}
 	if (!is_int($num)) {
@@ -28,6 +29,7 @@ function calcFactorial2 ($num) {
 			throw(new InvalidArgumentException("function argument must be numeric"));
 		}
 	} catch (Exception $e) {
+		echo $e->getMessage();
 		return 0;
 	}
 	if (!is_int($num)) {

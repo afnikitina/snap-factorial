@@ -40,8 +40,8 @@ function calcFactorial2 ($num) {
 	} else if ($num === 0) {
 		$num = 1;
 	}
-	while ($num > 1) {
-		return ($num * ($num-1));
+	while ($num > 2) {
+		return ($num * calcFactorial2 ($num-1));
 	}
 	return $num;
 }

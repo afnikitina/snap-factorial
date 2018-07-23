@@ -11,9 +11,9 @@ function calcFactorial ($num) {
 	}
 	if (!is_int($num)) {
 		$num = (int)$num;
-	} else if ($num === 0) [
+	} else if ($num === 0) {
 		$num = 1;
-	]
+	}
 	$result = $num;
 	for ($i = $num-1; $i >=1; $i--) {
 		$result *= $i;
@@ -36,9 +36,9 @@ function calcFactorial2 ($num) {
 	}
 	if (!is_int($num)) {
 		$num = (int)$num;
-	} else if ($num === 0) [
+	} else if ($num === 0) {
 		$num = 1;
-	]
+	}
 	while ($num > 1) {
 		return ($num * ($num-1));
 	}

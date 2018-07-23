@@ -1,6 +1,13 @@
 <?php
 
 function calcFactorial ($num) {
+	try {
+		if (!is_numeric($num)) {
+			throw(new InvalidArgumentException("function argument must be numeric"));
+		}
+	} catch (Exception $e) {
+		return 0;
+	}
 	if (!is_int($num)) {
 		$num = (int)$num;
 	}
@@ -10,11 +17,19 @@ function calcFactorial ($num) {
 	}
 	return $result;
 }
-//test function calcFactorial()
+
+// test calcFactorial()
 echo calcFactorial(5);
 
 // creating a function that recurrently calls itself whille the condition holds true
 function calcFactorial2 ($num) {
+	try {
+		if (!is_numeric($num)) {
+			throw(new InvalidArgumentException("function argument must be numeric"));
+		}
+	} catch (Exception $e) {
+		return 0;
+	}
 	if (!is_int($num)) {
 		$num = (int)$num;
 	}
@@ -24,5 +39,5 @@ function calcFactorial2 ($num) {
 	return $num;
 }
 
-//test function calcFactorial2()
-echo calcFactorial(6.34);
+// test calcFactorial2()
+echo calcFactorial("foo");

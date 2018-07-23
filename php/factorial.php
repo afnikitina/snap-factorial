@@ -44,7 +44,7 @@ function calcFactorial2 ($num) {
 		$num = 1;
 	}
 	while ($num > 1) {
-		return calcFactorial2($num-1);
+		return ($num * ($num-1));
 	}
 	return $num;
 }

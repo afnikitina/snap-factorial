@@ -4,6 +4,8 @@ function calcFactorial ($num) {
 	try {
 		if (!is_numeric($num)) {
 			throw(new InvalidArgumentException("function argument must be numeric"));
+		} else if ($num > 20) {
+			throw(new RangeException("number can not larger than 20"));
 		}
 	} catch (Exception $e) {
 		echo $e->getMessage();
@@ -27,10 +29,12 @@ echo calcFactorial(5);
 // creating a function that recurrently calls itself whille the condition holds true
 function calcFactorial2 ($num) {
 	try {
-		if (!is_numeric($num)) {
+		if(!is_numeric($num)) {
 			throw(new InvalidArgumentException("function argument must be numeric"));
+		} else if($num > 20) {
+			throw(new RangeException("number can not larger than 20"));
 		}
-	} catch (Exception $e) {
+		} catch (Exception $e) {
 		echo $e->getMessage();
 		return 0;
 	}

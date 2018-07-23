@@ -9,7 +9,7 @@ function calcFactorial ($num) {
 		}
 	} catch (Exception $e) {
 		echo $e->getMessage();
-		return 0;
+		return -1;
 	}
 	if (!is_int($num)) {
 		$num = (int)$num;
@@ -24,7 +24,7 @@ function calcFactorial ($num) {
 }
 
 // test calcFactorial()
-echo calcFactorial(5);
+echo calcFactorial(5) ."<br />";
 
 // creating a function that recurrently calls itself whille the condition holds true
 function calcFactorial2 ($num) {
@@ -34,9 +34,9 @@ function calcFactorial2 ($num) {
 		} else if($num > 20) {
 			throw(new RangeException("number can not larger than 20"));
 		}
-		} catch (Exception $e) {
+	} catch (Exception $e) {
 		echo $e->getMessage();
-		return 0;
+		return -1;
 	}
 	if (!is_int($num)) {
 		$num = (int)$num;
@@ -50,4 +50,5 @@ function calcFactorial2 ($num) {
 }
 
 // test calcFactorial2()
-echo calcFactorial("foo");
+echo calcFactorial("foo") ."<br />";
+echo calcFactorial2(21) ."<br />";

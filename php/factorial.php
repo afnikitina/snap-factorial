@@ -23,9 +23,6 @@ function calcFactorial ($num) {
 	return $result;
 }
 
-// test calcFactorial()
-echo calcFactorial(5) ."<br />";
-
 // creating a function that recurrently calls itself whille the condition holds true
 function calcFactorial2 ($num) {
 	try {
@@ -49,6 +46,15 @@ function calcFactorial2 ($num) {
 	return $num;
 }
 
+function calcFact($num) {
+  while ($num > 2) {
+	  return ($num * calcFact($num-1));
+  }
+  return $num;
+}
+
 // test calcFactorial2()
+echo calcFactorial(5) ."<br />";
 echo calcFactorial("foo") ."<br />";
 echo calcFactorial2(21) ."<br />";
+echo calcFact(7) ."<br />";

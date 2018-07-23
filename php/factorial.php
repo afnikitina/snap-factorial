@@ -10,6 +10,8 @@ function calcFactorial ($num) {
 	}
 	return $result;
 }
+//test function calcFactorial()
+echo calcFactorial(5);
 
 // creating a function that recurrently calls itself whille the condition holds true
 function calcFactorial2 ($num) {
@@ -22,3 +24,5 @@ function calcFactorial2 ($num) {
 	return $num;
 }
 
+//test function calcFactorial2()
+echo calcFactorial(6.34);
